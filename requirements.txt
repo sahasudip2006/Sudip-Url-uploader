@@ -11,4 +11,4 @@ dnspython
 motor[srv]
 beautifulsoup4
 pyrogram==1.4.16
-https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest
+https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git
