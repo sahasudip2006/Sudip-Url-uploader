@@ -6,6 +6,7 @@ from pyrogram import filters
 from pyrogram import Client as Clinton
 from plugins.youtube_dl_button import youtube_dl_call_back
 from plugins.dl_button import ddl_call_back
+from translation import Translation
 
 @Clinton.on_callback_query(filters.regex('^X0$'))
 async def delt(bot, update):
