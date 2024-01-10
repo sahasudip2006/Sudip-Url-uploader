@@ -1,12 +1,72 @@
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
+
 class Translation(object):
 
+    START_TEXT = """
+<b>ʜᴇʟʟᴏ {} 👋
+
+ɪ ᴀᴍ ᴀ ᴘᴏᴡᴇʀғᴜʟ ᴀᴅᴠᴀɴᴄᴇ ᴜʀʟ ᴜᴘʟᴏᴀᴅᴇʀ ʙᴏᴛ
+
+ɢɪᴠᴇ ᴍᴇ ᴀɴʏ ʟɪɴᴋ ɪ ᴡɪʟʟ ᴜᴘʟᴏᴀᴅ ɪɴᴛᴏ ғɪʟᴇ ᴏʀ ᴠɪᴅᴇᴏ ᴡɪᴛʜ ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ sᴜᴘᴘᴏʀᴛ
+
+ᴛʜɪs ʙᴏᴛ ɪs ᴘᴏᴡᴇʀᴇᴅ ʙʏ <a href="https://t.me/kingvj01">ᴛᴇᴄʜ ᴠᴊ</a></b>
+"""
+
+    HELP_TEXT = """
+<b>💢 ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ
+
+🔻 sᴇɴᴅ ᴍᴇ ᴛʜᴇ ɢᴏᴏɢʟᴇ ᴅʀɪᴠᴇ | ʏᴛᴅʟ | ᴅɪʀᴇᴄᴛ ʟɪɴᴋs.
+
+🔻sᴇʟᴇᴄᴛ ᴛʜᴇ ᴅᴇsɪʀᴇᴅ ᴏᴘᴛɪᴏɴ.
+
+🔻 ᴛʜᴇɴ ʙᴇ ʀᴇʟᴀxᴇᴅ ʏᴏᴜʀ ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴜᴘʟᴏᴀᴅᴇᴅ sᴏᴏɴ..</b> 
+"""
+
+    ABOUT_TEXT = """
+<b>♻️ My Name : ᴜʀʟ ᴜᴘʟᴏᴀᴅᴇʀ ʙᴏᴛ
+
+🌀 ᴄʜᴀɴɴᴇʟ : <a href="https://t.me/vj_botz">ᴠᴊ ʙᴏᴛᴢ</a>
+
+🌺 ʜᴇʀᴏᴋᴜ : <a href="https://heroku.com/">ʜᴇʀᴏᴋᴜ</a>
+
+📑 ʟᴀɴɢᴜᴀɢᴇ : <a href="https://www.python.org/">ᴘʏᴛʜᴏɴ 3.10.5</a>
+
+🇵🇲 ғʀᴀᴍᴇᴡᴏʀᴋ : <a href="https://docs.pyrogram.org/">ᴘʏʀᴏɢʀᴀᴍ 2.0.30</a>
+
+👲 ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href="https://t.me/kingvj01">ᴛᴇᴄʜ ᴠᴊ</a></b>
+
+"""
+
+    
+    START_BUTTONS = InlineKeyboardMarkup(
+        [[
+            InlineKeyboardButton('❓ ʜᴇʟᴘ', callback_data='help'),
+            InlineKeyboardButton('🦊 ᴀʙᴏᴜᴛ', callback_data='about')
+        ], [
+            InlineKeyboardButton('📛 Close', callback_data='close')
+        ]]
+    )
+    HELP_BUTTONS = InlineKeyboardMarkup(
+        [[
+            InlineKeyboardButton('🏠 ʜᴏᴍᴇ', callback_data='home'),
+            InlineKeyboardButton('🦊 ᴀʙᴏᴜᴛ', callback_data='about')
+        ], [
+            InlineKeyboardButton('📛 ᴄʟᴏsᴇ', callback_data='close')
+        ]]
+    )
+    ABOUT_BUTTONS = InlineKeyboardMarkup(
+        [[
+            InlineKeyboardButton('🏠 ʜᴏᴍᴇ', callback_data='home'),
+            InlineKeyboardButton('❓ ʜᴇʟᴘ', callback_data='help')
+        ], [
+            InlineKeyboardButton('📛 ᴄʟᴏsᴇ', callback_data='close')
+        ]]
+    )
+    
     ERROR = "<b>ERROR :</b> {}"
 
-    START_TEXT = """Hi {},
-I'm URL X Uploader!
-You can upload HTTP/HTTPS direct link, Using this bot!
-
-/help for more details!"""
+    
     FORMAT_SELECTION = "Select the desired format: <a href='{}'>file size might be approximate</a> \nIf you want to set custom thumbnail, send photo before or quickly after tapping on any of the below buttons.\nYou can use /deletethumbnail to delete the auto-generated thumbnail."
     SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format:
 URL | filename | username | password"""
