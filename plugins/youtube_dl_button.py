@@ -111,7 +111,7 @@ async def youtube_dl_call_back(bot, update):
     t_response = stdout.decode().strip()
     if e_response:
         await bot.edit_message_text(chat_id=update.message.chat.id,
-        message_id=update.message.message_id, text="ERROR : Download failed ⚠️")
+        message_id=update.message.message_id, text="**Tech VJ Said\n\nERROR : Download failed ⚠️**")
         return
     if not t_response:
         asyncio.create_task(clendir(tmp_directory_for_each_user))
@@ -190,7 +190,7 @@ async def youtube_dl_call_back(bot, update):
         asyncio.create_task(clendir(file_location))
         asyncio.create_task(clendir(thumbnail))
         await bot.edit_message_text(
-        text="Uploaded sucessfully ✓\n\nJOIN : @SPACE_X_BOTS",
+        text="<b>ᴜᴘʟᴏᴀᴅᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ✔️\n\nᴊᴏɪɴ @VJ_BOTZ</b>",
         chat_id=update.message.chat.id,
         message_id=update.message.message_id,
         disable_web_page_preview=True)
