@@ -1,4 +1,15 @@
 import os
+import re
+from os import environ, getenv
+
+id_pattern = re.compile(r'^.\d+$')
+def is_enabled(value, default):
+    if value.lower() in ["true", "yes", "1", "enable", "y"]:
+        return True
+    elif value.lower() in ["false", "no", "0", "disable", "n"]:
+        return False
+    else:
+        return default
 
 class Config(object):
     # get a token from @BotFather
@@ -31,3 +42,8 @@ class Config(object):
     DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://sushankm16:4i1WAfPYKWyqPIDD@cluster0.sngp9pz.mongodb.net/?retryWrites=true&w=majority")
     MAX_RESULTS = "50"
     PREMIUM_USER = os.environ.get("PREMIUM_USER", "6168162777")
+
+    VERIFY = bool(environ.get('VERIFY', True))
+    SHORTLINK_URL = environ.get('SHORTLINK_URL', 'moneykamalo.com')
+    SHORTLINK_API = environ.get('SHORTLINK_API', '0eefb93e1e3ce9470a7033115ceb1bad13a9d674')
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001623633000"))
