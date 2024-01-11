@@ -38,7 +38,7 @@ async def help_user(bot, update):
 
 @Clinton.on_message(filters.private & filters.command(["start"]))
 async def start(bot, update):
-    if len(message.command) == 2:
+    if len(update.command) == 2:
       
     # logger.info(update)
         await AddUser(bot, update)
@@ -49,7 +49,7 @@ async def start(bot, update):
             reply_to_message_id=update.message_id
         )
         return
-    data = message.command[1]
+    data = update.command[1]
 
     if data.split("-", 1)[0] == "verify":
         userid = data.split("-", 2)[1]
