@@ -38,15 +38,17 @@ async def help_user(bot, update):
 
 @Clinton.on_message(filters.private & filters.command(["start"]))
 async def start(bot, update):
+    if len(message.command) == 2:
+      
     # logger.info(update)
-    await AddUser(bot, update)
-    await bot.send_message(
-        chat_id=update.chat.id,
-        text=Translation.START_TEXT.format(update.from_user.mention),
-        reply_markup=Translation.START_BUTTONS,
-        reply_to_message_id=update.message_id
-    )
-    return
+        await AddUser(bot, update)
+        await bot.send_message(
+            chat_id=update.chat.id,
+            text=Translation.START_TEXT.format(update.from_user.mention),
+            reply_markup=Translation.START_BUTTONS,
+            reply_to_message_id=update.message_id
+        )
+        return
     data = message.command[1]
 
     if data.split("-", 1)[0] == "verify":
