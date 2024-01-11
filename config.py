@@ -47,3 +47,4 @@ class Config(object):
     SHORTLINK_URL = environ.get('SHORTLINK_URL', 'moneykamalo.com')
     SHORTLINK_API = environ.get('SHORTLINK_API', '0eefb93e1e3ce9470a7033115ceb1bad13a9d674')
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001623633000"))
+    TUTORIAL = os.environ.get("TUTORIAL", "https://t.me/How_To_Open_Linkl")
