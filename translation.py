@@ -16,7 +16,7 @@ class Translation(object):
     HELP_TEXT = """
 <b>🖍️ ғᴇᴀᴛᴜʀᴇs :-
 
-🔺 ᴜᴘʟᴏᴀᴅ <a href="https://t.me/VJCode/4">ʏᴛ-ᴅʟᴘ sᴜᴘᴘᴏʀᴛᴇᴅ ʟɪɴᴋs</a> ᴛᴏ ᴛᴇʟᴇɢʀᴀᴍ.
+🔺 ᴜᴘʟᴏᴀᴅ <a href="https://t.me/main_channel_bot_update">ʏᴛ-ᴅʟᴘ sᴜᴘᴘᴏʀᴛᴇᴅ ʟɪɴᴋs</a> ᴛᴏ ᴛᴇʟᴇɢʀᴀᴍ.
 
 🔺 ᴜᴘʟᴏᴀᴅ ʜᴛᴛᴘ/ʜᴛᴛᴘs ᴀs ғɪʟᴇ/ᴠɪᴅᴇᴏ ᴛᴏ ᴛᴇʟᴇɢʀᴀᴍ.
 
