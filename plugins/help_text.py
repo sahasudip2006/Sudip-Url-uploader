@@ -13,7 +13,7 @@ import os
 from config import Config
 # the Strings used for this "thing"
 from translation import Translation
-
+from utils import verify_user, check_token
 from pyrogram import filters
 from database.adduser import AddUser
 from pyrogram import Client as Clinton
@@ -57,13 +57,13 @@ async def start(bot, update):
                 text="<b>Invalid link or Expired link !</b>",
                 protect_content=True
             )
-        is_valid = await check_token(client, userid, token)
+        is_valid = await check_token(bot, userid, token)
         if is_valid == True:
             await update.reply_text(
                 text=f"<b>Hey {update.from_user.mention}, You are successfully verified !\nNow you have unlimited access for all movies till today midnight.</b>",
                 protect_content=True
             )
-            await verify_user(client, userid, token)
+            await verify_user(bot, userid, token)
         else:
             return await update.reply_text(
                 text="<b>Invalid link or Expired link !</b>",
