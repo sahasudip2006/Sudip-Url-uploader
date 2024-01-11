@@ -56,18 +56,18 @@ async def start(bot, update):
         token = data.split("-", 3)[2]
         if str(update.from_user.id) != str(userid):
             return await update.reply_text(
-                text="<b>Invalid link or Expired link !</b>",
+                text="<b>ᴇxᴘɪʀᴇᴅ ʟɪɴᴋ ᴏʀ ɪɴᴠᴀʟɪᴅ ʟɪɴᴋ !</b>",
                 protect_content=True
             )
         is_valid = await check_token(bot, userid, token)
         if is_valid == True:
             await update.reply_text(
-                text=f"<b>Hey {update.from_user.mention}, You are successfully verified !\nNow you have unlimited access for all movies till today midnight.</b>",
+                text=f"<b>ʜᴇʟʟᴏ {update.from_user.mention} 👋,\nʏᴏᴜ ᴀʀᴇ sᴜᴄᴄᴇssғᴜʟʟʏ ᴠᴇʀɪғɪᴇᴅ !\n\nɴᴏᴡ ʏᴏᴜ ʜᴀᴠᴇ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss ғᴏʀ ᴀʟʟ ᴜʀʟ ᴜᴘʟᴏᴀᴅɪɴɢ ᴛɪʟʟ ᴛᴏᴅᴀʏ ᴍɪᴅɴɪɢʜᴛ.</b>",
                 protect_content=True
             )
             await verify_user(bot, userid, token)
         else:
             return await update.reply_text(
-                text="<b>Invalid link or Expired link !</b>",
+                text="<b>ᴇxᴘɪʀᴇᴅ ʟɪɴᴋ ᴏʀ ɪɴᴠᴀʟɪᴅ ʟɪɴᴋ !</b>",
                 protect_content=True
             )
