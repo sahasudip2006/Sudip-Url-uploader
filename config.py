@@ -13,8 +13,8 @@ def is_enabled(value, default):
 
 class Config(object):
     # get a token from @BotFather
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6564513574:AAHsUNXeDK0rk6uDrdi37MgYKJ7gIqo1Yho")
-    BOT_USERNAME = os.environ.get("BOT_USERNAME", "DemoVJ_Bot")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6535249965:AAH2BM6qVqVvFJ-YyrUMV0qFJNwshn-WVP4")
+    BOT_USERNAME = os.environ.get("BOT_USERNAME", "S_url_uploader_bot")
     # The Telegram API things
     API_ID = int(os.environ.get("API_ID", "20389440"))
     API_HASH = os.environ.get("API_HASH", "a1a06a18eb9153e9dbd447cfd5da2457")
@@ -36,15 +36,15 @@ class Config(object):
     # set timeout for subprocess
     PROCESS_MAX_TIMEOUT = 3600
     # your telegram id
-    OWNER_ID = int(os.environ.get("OWNER_ID", "6168162777"))
+    OWNER_ID = int(os.environ.get("OWNER_ID", "5165943027"))
     SESSION_NAME = "UPLOADER-X-BOT"
     # database uri (mongodb)
     DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://sushankm16:4i1WAfPYKWyqPIDD@cluster0.sngp9pz.mongodb.net/?retryWrites=true&w=majority")
     MAX_RESULTS = "50"
-    PREMIUM_USER = os.environ.get("PREMIUM_USER", "6168162777")
+    PREMIUM_USER = os.environ.get("PREMIUM_USER", "5165943027")
 
     VERIFY = bool(environ.get('VERIFY', True))
-    SHORTLINK_URL = environ.get('SHORTLINK_URL', 'moneykamalo.com')
-    SHORTLINK_API = environ.get('SHORTLINK_API', '0eefb93e1e3ce9470a7033115ceb1bad13a9d674')
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001623633000"))
-    TUTORIAL = os.environ.get("TUTORIAL", "https://t.me/How_To_Open_Linkl")
+    SHORTLINK_URL = environ.get('SHORTLINK_URL', 'mdisk.pro')
+    SHORTLINK_API = environ.get('SHORTLINK_API', 'ee2e50b000e88ab6549ce6ade5313149a9851577')
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001565949579"))
+    TUTORIAL = os.environ.get("TUTORIAL", "https://t.me/main_channel_bot_update")
