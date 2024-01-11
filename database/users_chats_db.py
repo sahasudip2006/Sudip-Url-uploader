@@ -4,10 +4,10 @@
 
 # https://github.com/odysseusmax/animated-lamp/blob/master/bot/database/database.py
 import motor.motor_asyncio
-from config import DATABASE_URL
+from config import Config
 
 DATABASE_NAME = "vjbotztechvj"
-DATABASE_URI = DATABASE_URL
+DATABASE_URI = Config.DATABASE_URL
 
 class Database:
     
