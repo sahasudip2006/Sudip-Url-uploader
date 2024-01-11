@@ -16,8 +16,8 @@ class Config(object):
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "6535249965:AAH2BM6qVqVvFJ-YyrUMV0qFJNwshn-WVP4")
     BOT_USERNAME = os.environ.get("BOT_USERNAME", "S_url_uploader_bot")
     # The Telegram API things
-    API_ID = int(os.environ.get("API_ID", "20389440"))
-    API_HASH = os.environ.get("API_HASH", "a1a06a18eb9153e9dbd447cfd5da2457")
+    API_ID = int(os.environ.get("API_ID", "12596147"))
+    API_HASH = os.environ.get("API_HASH", "376d2b9215aad81b9522afccd1067786")
     # Get these values from my.telegram.org
     # the download location, where the HTTP Server runs
     DOWNLOAD_LOCATION = "./DOWNLOADS"
