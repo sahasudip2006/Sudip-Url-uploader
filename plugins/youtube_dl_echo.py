@@ -20,6 +20,16 @@ from helper_funcs.display_progress import progress_for_pyrogram, humanbytes, Tim
 
 @Clinton.on_message(filters.private & ~filters.via_bot & filters.regex(pattern=".*http.*"))
 async def echo(bot, update):
+    if not await check_verification(bot, update.from_user.id) and Config.VERIFY == True:
+        btn = [[
+            InlineKeyboardButton("Verify", url=await get_token(bot, update.from_user.id, f"https://telegram.me/{Config.BOT_USERNAME}?start="))
+        ]]
+        await update.reply_text(
+            text="<b>You are not verified !\nKindly verify to continue !</b>",
+            protect_content=True,
+            reply_markup=InlineKeyboardMarkup(btn)
+        )
+        return
     await AddUser(bot, update)
     imog = await update.reply_text("**ᴘʀᴏᴄᴇssɪɴɢ ʏᴏᴜʀ ʀᴇǫᴜᴇsᴛ ᴅᴇᴀʀ...⚡**", reply_to_message_id=update.message_id)
     youtube_dl_username = None
