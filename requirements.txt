@@ -11,3 +11,8 @@ dnspython
 motor[srv]
 beautifulsoup4
 pyrogram==1.4.16
+ffmpeg-python>=0.2.0 
+datetime 
+pytz 
+requests 
+bs4 
