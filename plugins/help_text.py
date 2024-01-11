@@ -46,3 +46,26 @@ async def start(bot, update):
         reply_markup=Translation.START_BUTTONS,
         reply_to_message_id=update.message_id
     )
+    return
+    data = message.command[1]
+
+    if data.split("-", 1)[0] == "verify":
+        userid = data.split("-", 2)[1]
+        token = data.split("-", 3)[2]
+        if str(update.from_user.id) != str(userid):
+            return await update.reply_text(
+                text="<b>Invalid link or Expired link !</b>",
+                protect_content=True
+            )
+        is_valid = await check_token(client, userid, token)
+        if is_valid == True:
+            await update.reply_text(
+                text=f"<b>Hey {update.from_user.mention}, You are successfully verified !\nNow you have unlimited access for all movies till today midnight.</b>",
+                protect_content=True
+            )
+            await verify_user(client, userid, token)
+        else:
+            return await update.reply_text(
+                text="<b>Invalid link or Expired link !</b>",
+                protect_content=True
+            )
