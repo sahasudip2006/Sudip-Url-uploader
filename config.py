@@ -37,7 +37,7 @@ class Config(object):
     PROCESS_MAX_TIMEOUT = 3600
     # your telegram id
     OWNER_ID = int(os.environ.get("OWNER_ID", "5165943027"))
-    SESSION_NAME = "UPLOADER-X-BOT"
+    SESSION_NAME = "S_url_uploader_bot"
     # database uri (mongodb)
     DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://sushankm16:4i1WAfPYKWyqPIDD@cluster0.sngp9pz.mongodb.net/?retryWrites=true&w=majority")
     MAX_RESULTS = "50"
