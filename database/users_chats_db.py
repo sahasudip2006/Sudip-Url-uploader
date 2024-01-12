@@ -6,7 +6,7 @@
 import motor.motor_asyncio
 from config import Config
 
-DATABASE_NAME = "vjbotztechvj"
+DATABASE_NAME = "sudipsaha2006"
 DATABASE_URI = Config.DATABASE_URL
 
 class Database:
