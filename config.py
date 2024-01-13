@@ -43,7 +43,7 @@ class Config(object):
     MAX_RESULTS = "50"
     PREMIUM_USER = os.environ.get("PREMIUM_USER", "5165943027")
 
-    VERIFY = bool(environ.get('VERIFY', True))
+    VERIFY = bool(environ.get('VERIFY', False))
     SHORTLINK_URL = environ.get('SHORTLINK_URL', 'mdisk.pro')
     SHORTLINK_API = environ.get('SHORTLINK_API', 'ee2e50b000e88ab6549ce6ade5313149a9851577')
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001565949579"))
